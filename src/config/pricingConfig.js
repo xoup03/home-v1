@@ -4,17 +4,17 @@
 export const pricingData = {
     quarterly: {
       Basic: 2500,
-      Professional: 4750,
+      Professional: 4000,
       Ultimate: 6750
     },
     halfYearly: {
       Basic: 4000,
-      Professional: 8500,
+      Professional: 7000,
       Ultimate: 12500
     },
     yearly: {
       Basic: 7000,
-      Professional: 16000,
+      Professional: 13000,
       Ultimate: 24000
     }
   };

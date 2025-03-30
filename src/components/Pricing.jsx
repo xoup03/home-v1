@@ -69,6 +69,9 @@ const PricingSection = () => {
             <p className="text-gray-600 text-lg max-w-lg mx-auto">
               Smart solutions at prices that work for you.
             </p>
+            <p className="text-gray-600 text-lg max-w-lg mx-auto">
+            *No other Hidden Charges or Additional Cost
+            </p>
           </motion.div>
 
           {/* Billing Toggle */}
