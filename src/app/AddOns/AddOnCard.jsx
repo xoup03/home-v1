@@ -20,10 +20,7 @@ function AddonCard({ addon }) {
             {/* Vector pattern with improved scaling and positioning */}
             <div 
                 className="absolute inset-0 opacity-8 transition-all duration-500 bg-right-top bg-no-repeat transform scale-110"
-                style={{ 
-                    backgroundImage: `url('/vectors/${addon.vector}.svg')`,
-                    backgroundSize: '80%',
-                }}
+                
             />
             
             {/* Card shine effect on hover */}

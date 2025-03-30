@@ -28,6 +28,7 @@ import { useSearchParams } from "next/navigation";
 // Form validation schemas for each step
 const step1Schema = z.object({
   name: z.string().min(2, "Restaurant name must be at least 2 characters"),
+  admin_name: z.string().min(2, "Owner name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
   phone: z.string().min(10, "Phone number must be at least 10 digits"),
   logo_url: z.string().url("Invalid URL").optional().or(z.literal("")),
@@ -88,6 +89,7 @@ function OnboardingForm({ token }) {
     resolver: zodResolver(step1Schema),
     defaultValues: {
       name: "",
+      admin_name: "",
       email: "",
       phone: "",
       logo_url: "",
@@ -178,7 +180,7 @@ function OnboardingForm({ token }) {
       step4Form.reset();
       setLogoUrl("");
       setCurrentStep(1);
-      router.push("/dashboard");
+      router.push("/");
     } catch (err) {
       toast.error(err.message || "Something went wrong. Please try again.", {
         description: "Error details here",
@@ -247,7 +249,7 @@ function OnboardingForm({ token }) {
       case 1:
         return (
           <Form {...step1Form} key="step-1">
-            <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-2" onSubmit={(e) => e.preventDefault()}>
               <h3 className="text-xl font-semibold">Basic Information</h3>
               <FormField
                 control={step1Form.control}
@@ -257,6 +259,19 @@ function OnboardingForm({ token }) {
                     <FormLabel>Restaurant Name</FormLabel>
                     <FormControl>
                       <Input placeholder="Enter restaurant name" {...field} value={field.value ?? ""} onChange={(e) => field.onChange(e.target.value)} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={step1Form.control}
+                name="admin_name"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Owner Name</FormLabel>
+                    <FormControl>
+                      <Input placeholder="Enter owner name" {...field} value={field.value ?? ""} onChange={(e) => field.onChange(e.target.value)} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

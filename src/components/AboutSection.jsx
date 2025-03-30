@@ -50,13 +50,13 @@ function AboutSection() {
                 and enhance customer satisfaction, ensuring a seamless dining
                 experience for both staff and guests.
               </p>
-              <a
+              {/* <a
                 href="/Offerings"
                 className="mt-4 inline-block text-sm font-medium text-zinc-600 hover:text-zinc-800 transition duration-300"
               >
                 Learn more →
-              </a>
-            </div>
+              </a>*/}
+            </div> 
           </div>
 
           <div className="bg-white p-6 rounded-xl shadow-md border border-zinc-100 hover:shadow-lg transition duration-300 relative overflow-hidden group">
@@ -91,12 +91,12 @@ function AboutSection() {
                 You're just one step away from ordering your food—simply scan,
                 place your order, and enjoy!
               </h2> */}
-              <a
+              {/* <a
                 href="/MeetOurTeam"
                 className="mt-4 inline-block text-sm font-medium text-zinc-600 hover:text-zinc-800 transition duration-300"
               >
                 Meet our team →
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
