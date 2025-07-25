@@ -186,47 +186,6 @@ const ShopOnboarding = () => {
     navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
   };
 
-  // const handleSubmit = async () => {
-  //   setIsSubmitting(true);
-  //   setSubmitStatus(null);
-
-  //   const submissionData = {
-  //     ...formData,
-  //     location: {
-  //       ...formData.location,
-  //       name: formData.name, // Include name in location as per API structure
-  //     },
-  //   };
-
-  //   try {
-  //     const response = await fetch((process.env.NEXT_PUBLIC_API_BASE_URL_KARTIQ||"https://kartiq-v1.xoup.co.in")+"/api/v1/ascendra/shop", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(submissionData),
-  //     });
-
-  //     if (!response.ok) {
-  //       throw new Error(`HTTP error! status: ${response.status}`);
-  //     }
-
-  //     const result = await response.json();
-  //     setSubmitStatus({
-  //       type: "success",
-  //       message: "Account created successfully! Welcome to Xoup.",
-  //     });
-  //     console.log("API Response:", result);
-  //   } catch (error) {
-  //     setSubmitStatus({
-  //       type: "error",
-  //       message: `Something went wrong: ${error.message}. Please try again.`,
-  //     });
-  //   } finally {
-  //     setIsSubmitting(false);
-  //   }
-  // };
-
   const handleSubmit = async () => {
     setIsSubmitting(true);
     setSubmitStatus(null);
